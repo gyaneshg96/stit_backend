@@ -40,6 +40,7 @@ A graphql playground will be created. You will see a list of queries, mutations,
 Sample commands to run the endpoints:
 
 Register
+```
 mutation {
       register(data:
         {
@@ -53,16 +54,20 @@ mutation {
         createdDate
       }
      }
+```
      
 Login
+```
 mutation{
       login(
         email: "john.doe@gmail.com",
         password: "seven"
-        )}`
+        )}
+```
         
 Me (for checking current user)
 
+```
 query{
 meQuery {
         id,
@@ -71,13 +76,18 @@ meQuery {
         createdDate
 }
 }
+```
+Logout
 
+```
 mutation {
 logout{
 }}
+```
 
 Add business
 
+```
 mutation{
   addBusiness(data:{
   name: "Joes Pizza"
@@ -88,30 +98,38 @@ mutation{
   name,
   address
   }}
-  
+
+```
 Add favorite
 
+```
 mutation{
   setFavorite(businessId: <id>)
 }
+```
 
 Remove favorite
 
+```
 mutation{
   unsetFavorite(businessId: <id>)
 }
+```
 
 Reserve
 
+```
 mutation{
 reserve(data:{userId: 0, businessId: <id>}){
 id,
 userId,
 businessId} 
 }
+```
 
 Get Reservations
 
+```
 query{
   getReservations{
   }
@@ -119,6 +137,7 @@ query{
   userId,
   businessId}
   }
+```
 
      
      
