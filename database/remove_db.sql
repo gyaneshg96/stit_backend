@@ -1,0 +1,3 @@
+DROP DATABASE  IF EXISTS  "stit_backend";
+
+DROP USER IF EXISTS admin;
